@@ -1,3 +1,4 @@
+// Server runs at http://localhost:3000
 PORT = 3000;
 
 const express = require('express');
