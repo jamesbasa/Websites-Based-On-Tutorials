@@ -11,14 +11,35 @@ tiles.addTo(mymap);
 const marker = L.marker([0, 0]).addTo(mymap);
 
 
+let lat, lon;
+/**
+ * Sends location data to server when button is clicked
+ */
+async function sendData(event) {
+	// POST request
+	const res = await fetch("/locations", {
+		method: "POST",
+        headers: {
+        	'Content-Type': 'application/json'
+        },
+		body: JSON.stringify({
+			lat,
+			lon
+		})
+	});
+	const data = await res.json();
+	console.log(data);
+}
+
+
 // Geolocation API allows the user to provide their location 
 // to web applications if they so desire
 if ('geolocation' in navigator) {
-	console.log('geolocation available');
-	navigator.geolocation.getCurrentPosition(position =>
+	console.log('Geolocation available');
+	navigator.geolocation.getCurrentPosition(async position =>
 		{
-			const lat = position.coords.latitude;
-			const lon = position.coords.longitude;
+			lat = position.coords.latitude;
+			lon = position.coords.longitude;
 			marker.setLatLng([lat, lon]);
 			mymap.setView([lat, lon], 4);
 			document.getElementById('lat').textContent = lat.toFixed(2);
@@ -26,7 +47,7 @@ if ('geolocation' in navigator) {
 		});
 }
 else {
-	console.log('geolocation not available');
+	console.log('Geolocation not available');
 	// hide the map
 	document.getElementById("map").style.display = "none";
 }
