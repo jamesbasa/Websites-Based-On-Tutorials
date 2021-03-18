@@ -17,7 +17,7 @@ let lat, lon;
  */
 async function sendData(event) {
 	// POST request
-	const res = await fetch("/locations", {
+	const res = await fetch("/data", {
 		method: "POST",
         headers: {
         	'Content-Type': 'application/json'
@@ -50,4 +50,12 @@ else {
 	console.log('Geolocation not available');
 	// hide the map
 	document.getElementById("map").style.display = "none";
+}
+
+
+/**
+ * Gets location data from server when button is clicked
+ */
+async function viewData() {
+	window.location = "/data.html";
 }
