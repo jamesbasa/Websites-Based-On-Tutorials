@@ -1,8 +1,8 @@
 /**
- * Gets data from server
+ * Gets all data from server
  */
 async function getData() {
-	// POST request
+	// GET request
 	const res = await fetch("/data");
 	const data = await res.json();
 
