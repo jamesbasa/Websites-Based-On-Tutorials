@@ -20,6 +20,9 @@
     <%= render 'home/header' %> <!-- navbar partial -->
     <div class="container">
       <br/>
+      <% if notice %>
+        <%= render 'layouts/alert' %> <!-- alert partial -->
+      <% end %>
       <%= yield %>
     </div>
 
