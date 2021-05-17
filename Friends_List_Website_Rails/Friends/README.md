@@ -23,3 +23,10 @@ rails s
 
 You can find the server at
 http://localhost:3000
+
+## Example
+![Sign up image](img/sign_up.png)
+![Create friend image](img/create_friend.png)
+![Friends list image](img/friends_list.png)
+![Show friend image](img/show_friend.png)
+![Edit profile image](img/edit_profile.png)
