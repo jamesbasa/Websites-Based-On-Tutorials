@@ -15,6 +15,7 @@
     <%= @friend.phone %><br/>
     <%= @friend.twitter %><br/><br/>
   </p>
-  <%= link_to 'Edit', edit_friend_path(@friend), class:"btn btn-primary" %> |
-  <%= link_to 'Back', friends_path, class:"btn btn-secondary" %>
+  <%= link_to 'Back', friends_path, class:"btn btn-secondary" %> | 
+  <%= link_to 'Edit', edit_friend_path(@friend), class:"btn btn-primary" %> | 
+  <%= link_to "Delete", @friend, data: { confirm: "Are you sure?" }, method: :delete, class:"btn btn-danger" %>
 </div>
