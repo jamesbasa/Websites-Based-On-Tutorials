@@ -10,3 +10,7 @@ This contains several websites that I created with the assistance of different t
 - Uses NodeJS with Express to send client data ("dataselfies") to the server and save it to the NeDB database
 - The Coding Train & Joey Lee (YT): https://www.youtube.com/watch?v=DbcLg8nRWEg&list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X&index=2
 - The Coding Train & Joey Lee (Github): https://github.com/CodingTrain/Intro-to-Data-APIs-JS
+
+`Friends_List_Website_Rails`
+- Uses Ruby on Rails to allow for user authentication and management of a Friends List
+- freeCodeCamp (YT): https://www.youtube.com/watch?v=fmyvWz5TUWg
