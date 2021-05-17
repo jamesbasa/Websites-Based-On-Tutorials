@@ -46,6 +46,6 @@ class FriendsTest < ApplicationSystemTestCase
       click_on "Destroy", match: :first
     end
 
-    assert_text "Friend was successfully destroyed"
+    assert_text "Friend was successfully deleted"
   end
 end
